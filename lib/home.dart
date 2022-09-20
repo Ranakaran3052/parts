@@ -1,119 +1,130 @@
+import 'dart:core';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:parts/confiq/primaryconfig.dart';
+import 'package:parts/navigation/homenavigation.dart';
+import 'package:parts/navigation/profile.dart';
+import 'package:parts/navigation/settings.dart';
+
 import 'package:parts/screen/startuppage.dart';
 
-class MyHomePage extends StatelessWidget {
+import 'drawer/DrawerPages.dart';
+import 'navigation/gift.dart';
+
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   get mainAxisAlignment => null;
+  int _currentIndex = 0;
+  final List = [homenavigationpage(), profile(), gift(), settings()];
+
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static var _widgetOptions = <Widget>[
+    Text(
+      'Index 0: home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: account ',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: gift',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 3: Settings',
+      style: optionStyle,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+
+  @override
 
 // homepage
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text("parts seller"),
-          ),
+      drawer: DrawerPage(),
+      appBar: AppBar(
+        title: Center(
+          child: Text("parts seller"),
         ),
+      ),
 
-        //drawer
-        drawer: Drawer(
-          backgroundColor: Colors.blue[500],
-          child: ListView(
-            padding: EdgeInsets.all(0),
+//body
+
+      body: Center(
+        child: Container(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                  child: DrawerHeader(
-                child: DecoratedBox(
-                    decoration: BoxDecoration(
-                        color: Colors.red[100],
-                        borderRadius: BorderRadius.circular(10),
-                        border:
-                            Border.all(color: Color.fromARGB(255, 0, 56, 139))),
-                    child: Container(
-                      padding: EdgeInsets.all(50),
-                      child: Text(
-                        "hello sir ",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 35,
-                            color: Color.fromARGB(255, 233, 34, 34),
-                            wordSpacing: 6),
-                      ),
-                    )),
-              )),
-              ListTile(
-                leading: Icon(Icons.person),
-                title: Text("profile"),
-                onTap: () {},
+              Text(
+                "hello customer  ",
+                style: TextStyle(fontSize: 25, color: Color(0xffA10035)),
+                textAlign: TextAlign.center,
               ),
-              ListTile(
-                leading: Icon(Icons.help_center),
-                title: Text(" help"),
-                onTap: () {},
+              Text(
+                "lets sell the parts ",
+                style: TextStyle(fontSize: 20, color: Colors.red[600]),
               ),
-              ListTile(
-                leading: Icon(Icons.share),
-                title: Text("refer "),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.settings),
-                title: Text("settings"),
-                onTap: () {},
-              ),
-              ListTile(
-                leading: Icon(Icons.logout),
-                title: Text("logout"),
-                onTap: () {},
+              ElevatedButton(
+                onPressed: (() {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => startuppage()),
+                  );
+                  Icon(Icons.arrow_forward);
+                }),
+                child: Text("let's go "),
               )
             ],
           ),
         ),
+      ),
 
-//body
-//bood
-
-        body: Center(
-          child: Container(
-            margin: EdgeInsets.all(10),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "hello customer  ",
-                  style: TextStyle(fontSize: 25, color: Color(0xffA10035)),
-                  textAlign: TextAlign.center,
-                ),
-                Text(
-                  "lets sell the parts ",
-                  style: TextStyle(fontSize: 20, color: Colors.red[600]),
-                ),
-                ElevatedButton(
-                  onPressed: (() {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => startuppage()),
-                    );
-                    Icon(Icons.arrow_forward);
-                  }),
-                  child: Text("let's go "),
-                )
-              ],
-            ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.red,
           ),
-        ));
-
-    // bottomNavigationBar:
-    //     BottomNavigationBar(items: const <BottomNavigationBarItem>[
-    //   BottomNavigationBarItem(
-    //     icon: Icon(Icons.home),
-    //     label: 'Home',
-    //   )
-    // ]));
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'profile',
+            backgroundColor: Colors.green,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_box),
+            label: 'gift',
+            backgroundColor: Colors.purple,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Settings',
+            backgroundColor: Colors.pink,
+          ),
+        ],
+        currentIndex: _currentIndex,
+        selectedItemColor: Colors.amber[800],
+        onTap: _onItemTapped,
+      ),
+    );
   }
 }

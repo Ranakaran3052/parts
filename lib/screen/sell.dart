@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:parts/confiq/primaryconfig.dart';
+import 'package:parts/drawer/DrawerPages.dart';
 
 class sell extends StatefulWidget {
   const sell({super.key});
@@ -11,14 +12,18 @@ class sell extends StatefulWidget {
 }
 
 class _sellState extends State<sell> {
+  get navigationbar2 => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: primarybar,
-      drawer: primarydrawer,
       body: Center(
         child: Text("here we go "),
       ),
     );
+    // ignore: dead_code
+
+    ;
   }
 }

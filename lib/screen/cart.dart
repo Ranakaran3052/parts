@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:parts/confiq/primaryconfig.dart';
+import 'package:parts/drawer/DrawerPages.dart';
 
 class cart extends StatefulWidget {
   const cart({super.key});
@@ -18,7 +19,7 @@ class _cartState extends State<cart> {
             title: Center(
           child: Text("cart"),
         )),
-        drawer: primarydrawer,
+        drawer: DrawerPage(),
         body: Center(
           child: Container(
             padding: EdgeInsets.all(100),

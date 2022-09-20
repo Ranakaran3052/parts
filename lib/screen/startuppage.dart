@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:parts/drawer/DrawerPages.dart';
 import 'package:parts/screen/buy.dart';
 import 'package:parts/confiq/primaryconfig.dart';
 import 'package:parts/screen/sell.dart';
 
-class startuppage extends StatefulWidget {
-  const startuppage({super.key});
-
-  @override
-  State<startuppage> createState() => _startuppageState();
-}
-
-class _startuppageState extends State<startuppage> {
+class startuppage extends StatelessWidget {
+  final style = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   final List<String> entries = <String>[
     'buy',
   ];
+
   final List<int> colorCodes = <int>[400];
+
+  get navigationbar2 => null;
 
   @override
   Widget build(BuildContext context) {
@@ -24,28 +22,6 @@ class _startuppageState extends State<startuppage> {
       appBar: AppBar(
         title: Center(
           child: Text("parts seller"),
-        ),
-      ),
-      drawer: Drawer(
-        backgroundColor: primarycolor,
-        child: ListView(
-          padding: EdgeInsets.all(20),
-          children: [
-            Center(
-                child: DrawerHeader(
-              child: DecoratedBox(
-                  child: Text(
-                    "hello sir ",
-                    style: TextStyle(
-                        fontSize: 35, color: Colors.red, wordSpacing: 6),
-                    textAlign: TextAlign.center,
-                  ),
-                  decoration: BoxDecoration(
-                      color: Colors.yellow.shade300,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.yellowAccent))),
-            ))
-          ],
         ),
       ),
 
@@ -68,7 +44,10 @@ class _startuppageState extends State<startuppage> {
                           MaterialPageRoute(builder: (context) => buy()),
                         );
                       },
-                      child: Text("lets buy   something "),
+                      child: Text(
+                        "lets buy   something ",
+                        style: style,
+                      ),
                     ),
                   )
                 ],
@@ -88,7 +67,10 @@ class _startuppageState extends State<startuppage> {
                         );
                         // ignore: prefer_const_constructors
                       },
-                      child: Text("lets sale  something "),
+                      child: Text(
+                        "lets sale  something ",
+                        style: style,
+                      ),
                     ),
                   )
                 ],

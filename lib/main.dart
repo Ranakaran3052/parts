@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parts/home.dart';
+
 import 'package:parts/screen/login.dart';
 //import 'package:parts/startuppage.dart';
 
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home:
+
+          ///navigationbar2()
           // log_in()
           //startuppage()
           MyHomePage(),

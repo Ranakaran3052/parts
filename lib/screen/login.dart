@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:parts/confiq/primaryconfig.dart';
+import 'package:parts/drawer/DrawerPages.dart';
 
 class log_in extends StatefulWidget {
   const log_in({super.key});
@@ -15,7 +16,7 @@ class _log_inState extends State<log_in> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: primarybar,
-      drawer: primarydrawer,
+      drawer: DrawerPage(),
       body: Container(child: Center(child: Text('plz login first'))),
     );
   }
