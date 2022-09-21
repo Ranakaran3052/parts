@@ -24,27 +24,15 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   get mainAxisAlignment => null;
   int _currentIndex = 0;
-  final List = [homenavigationpage(), profile(), gift(), settings()];
+  //final List = [];
 
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static var _widgetOptions = <Widget>[
-    Text(
-      'Index 0: home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: account ',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: gift',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    homenavigationpage(),
+    profile(),
+    gift(),
+    settings()
   ];
 
   void _onItemTapped(int index) {
@@ -69,34 +57,37 @@ class _MyHomePageState extends State<MyHomePage> {
 //body
 
       body: Center(
-        child: Container(
-          margin: EdgeInsets.all(10),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "hello customer  ",
-                style: TextStyle(fontSize: 25, color: Color(0xffA10035)),
-                textAlign: TextAlign.center,
-              ),
-              Text(
-                "lets sell the parts ",
-                style: TextStyle(fontSize: 20, color: Colors.red[600]),
-              ),
-              ElevatedButton(
-                onPressed: (() {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => startuppage()),
-                  );
-                  Icon(Icons.arrow_forward);
-                }),
-                child: Text("let's go "),
-              )
-            ],
-          ),
-        ),
+        child: _widgetOptions.elementAt(_currentIndex),
       ),
+      // Center(
+      //   child: Container(
+      //     margin: EdgeInsets.all(10),
+      //     child: Column(
+      //       mainAxisAlignment: MainAxisAlignment.center,
+      //       children: [
+      //         Text(
+      //           "hello customer  ",
+      //           style: TextStyle(fontSize: 25, color: Color(0xffA10035)),
+      //           textAlign: TextAlign.center,
+      //         ),
+      //         Text(
+      //           "lets sell the parts ",
+      //           style: TextStyle(fontSize: 20, color: Colors.red[600]),
+      //         ),
+      //         ElevatedButton(
+      //           onPressed: (() {
+      //             Navigator.push(
+      //               context,
+      //               MaterialPageRoute(builder: (context) => startuppage()),
+      //             );
+      //             Icon(Icons.arrow_forward);
+      //           }),
+      //           child: Text("let's go "),
+      //         )
+      //       ],
+      //     ),
+      //   ),
+      // ),
 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

@@ -18,9 +18,7 @@ class _sellState extends State<sell> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: primarybar,
-      body: Center(
-        child: Text("here we go "),
-      ),
+      // body: GridView.count(crossAxisCount: crossAxisCount)
     );
     // ignore: dead_code
 
