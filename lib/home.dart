@@ -1,18 +1,13 @@
 import 'dart:core';
 import 'dart:html';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:parts/confiq/primaryconfig.dart';
+import 'package:parts/drawer/DrawerPages.dart';
 import 'package:parts/navigation/homenavigation.dart';
 import 'package:parts/navigation/profile.dart';
 import 'package:parts/navigation/settings.dart';
 
-import 'package:parts/screen/startuppage.dart';
-
-import 'drawer/DrawerPages.dart';
-import 'navigation/gift.dart';
+import 'package:parts/navigation/gift.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -23,7 +18,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   get mainAxisAlignment => null;
-  int _currentIndex = 0;
+  int _currentIndex = 1;
   //final List = [];
 
   static const TextStyle optionStyle =
@@ -50,7 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
       drawer: DrawerPage(),
       appBar: AppBar(
         title: Center(
-          child: Text("parts seller"),
+          child: Text(
+            "parts seller",
+            style: TextStyle(fontFamily: 'Poppins'),
+          ),
         ),
       ),
 
@@ -59,35 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: _widgetOptions.elementAt(_currentIndex),
       ),
-      // Center(
-      //   child: Container(
-      //     margin: EdgeInsets.all(10),
-      //     child: Column(
-      //       mainAxisAlignment: MainAxisAlignment.center,
-      //       children: [
-      //         Text(
-      //           "hello customer  ",
-      //           style: TextStyle(fontSize: 25, color: Color(0xffA10035)),
-      //           textAlign: TextAlign.center,
-      //         ),
-      //         Text(
-      //           "lets sell the parts ",
-      //           style: TextStyle(fontSize: 20, color: Colors.red[600]),
-      //         ),
-      //         ElevatedButton(
-      //           onPressed: (() {
-      //             Navigator.push(
-      //               context,
-      //               MaterialPageRoute(builder: (context) => startuppage()),
-      //             );
-      //             Icon(Icons.arrow_forward);
-      //           }),
-      //           child: Text("let's go "),
-      //         )
-      //       ],
-      //     ),
-      //   ),
-      // ),
 
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[

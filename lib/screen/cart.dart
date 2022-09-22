@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:parts/confiq/primaryconfig.dart';
 import 'package:parts/drawer/DrawerPages.dart';
 
 class cart extends StatefulWidget {
