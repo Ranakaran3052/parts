@@ -1,10 +1,8 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
+import '../screen/startuppage.dart';
+// import 'package:flutter/src/widgets/container.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 
 class profile extends StatefulWidget {
   @override
@@ -32,6 +30,7 @@ class _profileState extends State<profile> {
 
   @override
   Widget build(BuildContext context) {
+    print("profile_");
     return Container(
       child: GridView.count(
         primary: true,
@@ -40,19 +39,35 @@ class _profileState extends State<profile> {
         mainAxisSpacing: 10,
         crossAxisCount: 2,
         children: <Widget>[
-          Container(
-            decoration: gridStyle,
+          InkWell(
+            onTap: (() {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => startuppage()),
+              // );
+            }),
+            child: Container(
+              decoration: gridStyle,
 
-            // padding: EdgeInsets.all(8),
-            child: Center(
-              child: Text("Profile", style: textStyle),
+              // padding: EdgeInsets.all(8),
+              child: Center(
+                child: Text("Profile", style: textStyle),
+              ),
             ),
           ),
-          Container(
-            decoration: gridStyle,
-            // padding: const EdgeInsets.all(8),
-            //color: Colors.teal[200],
-            child: Center(child: Text('your order', style: textStyle)),
+          InkWell(
+            onTap: (() {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => startuppage()),
+              // );
+            }),
+            child: Container(
+              decoration: gridStyle,
+              // padding: const EdgeInsets.all(8),
+              //color: Colors.teal[200],
+              child: Center(child: Text('your order', style: textStyle)),
+            ),
           ),
           Container(
             decoration: gridStyle,
@@ -90,6 +105,15 @@ class _profileState extends State<profile> {
             child: Text(
               " buy again ",
               style: textStyle,
+            ),
+          ),
+          Container(
+            decoration: gridStyle,
+            child: Center(
+              child: Text(
+                " electric ",
+                style: textStyle,
+              ),
             ),
           )
         ],

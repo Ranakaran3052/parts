@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parts/drawer/DrawerPages.dart';
+import 'package:parts/veiwpages/drawer/DrawerPages.dart';
 
 class cart extends StatefulWidget {
   const cart({super.key});
@@ -11,6 +11,7 @@ class cart extends StatefulWidget {
 class _cartState extends State<cart> {
   @override
   Widget build(BuildContext context) {
+    print("cart");
     return Scaffold(
         appBar: AppBar(
             title: Center(

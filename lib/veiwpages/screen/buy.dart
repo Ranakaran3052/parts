@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:parts/confiq/primaryconfig.dart';
-import 'package:parts/drawerscreen/help.dart';
+import 'package:parts/veiwpages/confiq/primaryconfig.dart';
+import 'package:parts/veiwpages/drawerscreen/help.dart';
 
-import 'package:parts/screen/cart.dart';
+import 'package:parts/veiwpages/screen/cart.dart';
 
 class buy extends StatefulWidget {
   const buy({super.key});
@@ -16,6 +16,7 @@ class buy extends StatefulWidget {
 class _buyState extends State<buy> {
   @override
   Widget build(BuildContext context) {
+    print("buy_page");
     return Scaffold(
       appBar: AppBar(
         title: Text("buy "),

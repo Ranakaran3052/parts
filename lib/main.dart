@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:parts/home.dart';
-
-import 'package:parts/screen/login.dart';
+import 'dart:html';
 //import 'package:parts/startuppage.dart';
 
 void main() {
   runApp(const MyApp());
+  print("mainfile");
 }
 
 class MyApp extends StatelessWidget {

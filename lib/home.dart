@@ -1,13 +1,13 @@
 import 'dart:core';
 import 'dart:html';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:parts/drawer/DrawerPages.dart';
-import 'package:parts/navigation/homenavigation.dart';
-import 'package:parts/navigation/profile.dart';
-import 'package:parts/navigation/settings.dart';
+import 'package:parts/veiwpages/drawer/DrawerPages.dart';
+import 'package:parts/veiwpages/navigation/homenavigation.dart';
+import 'package:parts/veiwpages/navigation/profile.dart';
+import 'package:parts/veiwpages/navigation/settings.dart';
 
-import 'package:parts/navigation/gift.dart';
+import 'package:parts/veiwpages/navigation/gift.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -41,6 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
 // homepage
   @override
   Widget build(BuildContext context) {
+    print("homepage");
     return Scaffold(
       drawer: DrawerPage(),
       appBar: AppBar(

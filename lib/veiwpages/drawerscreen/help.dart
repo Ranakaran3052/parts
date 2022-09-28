@@ -10,6 +10,7 @@ class help extends StatefulWidget {
 class _helpState extends State<help> {
   @override
   Widget build(BuildContext context) {
+    print("help_page");
     return Scaffold(
       appBar: AppBar(
           title: Center(

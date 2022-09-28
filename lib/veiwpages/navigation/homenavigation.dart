@@ -14,6 +14,7 @@ class homenavigationpage extends StatefulWidget {
 class _homenavigationpageState extends State<homenavigationpage> {
   @override
   Widget build(BuildContext context) {
+    print("homenavigation_pageS");
     return Center(
         child: Container(
       margin: EdgeInsets.all(10),

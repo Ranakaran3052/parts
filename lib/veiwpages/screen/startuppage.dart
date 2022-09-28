@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:parts/drawer/DrawerPages.dart';
-import 'package:parts/screen/buy.dart';
-import 'package:parts/confiq/primaryconfig.dart';
-import 'package:parts/screen/sell.dart';
+import 'package:parts/veiwpages/drawer/DrawerPages.dart';
+import 'package:parts/veiwpages/screen/buy.dart';
+import 'package:parts/veiwpages/confiq/primaryconfig.dart';
+import 'package:parts/veiwpages/screen/sell.dart';
 
 class startuppage extends StatelessWidget {
   final style = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
@@ -18,6 +18,7 @@ class startuppage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(" startup_page");
     return Scaffold(
       appBar: AppBar(
         title: Center(

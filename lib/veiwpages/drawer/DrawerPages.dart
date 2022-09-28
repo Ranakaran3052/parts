@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:parts/drawerscreen/help.dart';
-import 'package:parts/navigation/profile.dart';
+import 'package:parts/veiwpages/drawerscreen/help.dart';
+import 'package:parts/veiwpages/navigation/profile.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    print("drawer_page");
     return Drawer(
       backgroundColor: Colors.blue[500],
       child: ListView(
