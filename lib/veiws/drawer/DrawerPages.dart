@@ -16,12 +16,16 @@ class DrawerPage extends StatelessWidget {
         padding: EdgeInsets.all(20),
         // ignore: prefer_const_literals_to_create_immutables
         children: [
-          Padding(padding: EdgeInsets.only(left: 60.00)),
-          CircleAvatar(
-            backgroundImage: AssetImage(
-              'asset/images/me.jpeg.png',
-            ),
-            radius: 50,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              CircleAvatar(
+                backgroundImage: AssetImage(
+                  'asset/images/me.jpeg.png',
+                ),
+                radius: 50,
+              ),
+            ],
           ),
           ListTile(
             leading: Icon(Icons.person),
