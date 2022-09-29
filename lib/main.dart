@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parts/home.dart';
+import 'package:parts/veiws/home.dart';
 import 'dart:html';
 //import 'package:parts/startuppage.dart';
 
@@ -20,12 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home:
+      home: MyHomePage(),
 
-          ///navigationbar2()
-          // log_in()
-          //startuppage()
-          MyHomePage(),
+      ///navigationbar2()
+      // log_in()
+      //startuppage()
     );
   }
 }
