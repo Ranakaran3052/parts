@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:parts/veiws/screen/cart.dart';
+import 'package:parts/models/veiws/screen/cart.dart';
 
 class buy extends StatefulWidget {
   const buy({super.key});
@@ -18,7 +18,7 @@ class _buyState extends State<buy> {
         title: Text("buy "),
         actions: [
           IconButton(
-            icon: Icon(Icons.stroller),
+            icon: Icon(Icons.shopping_basket),
             onPressed: () {
               Navigator.push(
                 context,
@@ -27,7 +27,12 @@ class _buyState extends State<buy> {
             },
           )
         ],
-      ),
+        bottom: Tab(),
+      ) ,
+      // Bottom : TabBar(tabs: [],),
+   
+      
+
       body: Container(child: Center(child: Text("get start"))),
     );
 

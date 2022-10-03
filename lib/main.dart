@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parts/veiws/home.dart';
+import 'package:parts/models/veiws/home.dart';
 import 'dart:html';
 //import 'package:parts/startuppage.dart';
 

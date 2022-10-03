@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:parts/veiws/screen/buy.dart';
-import 'package:parts/veiws/screen/sell.dart';
+import 'package:parts/models/veiws/screen/buy.dart';
+import 'package:parts/models/veiws/screen/sell.dart';
 
 class startuppage extends StatelessWidget {
   final style = TextStyle(fontSize: 20, fontWeight: FontWeight.bold);

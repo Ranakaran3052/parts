@@ -3,13 +3,13 @@ import 'dart:html';
 // import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:parts/confiq/color.dart';
-import 'package:parts/veiws/bottomNavigationBar/bottomNavigationBar.dart';
-import 'package:parts/veiws/drawer/DrawerPages.dart';
-import 'package:parts/veiws/navigation/homenavigation.dart';
-import 'package:parts/veiws/navigation/profile.dart';
-import 'package:parts/veiws/navigation/settings.dart';
+import 'package:parts/models/veiws/bottomNavigationBar/bottomNavigationBar.dart';
+import 'package:parts/models/veiws/drawer/DrawerPages.dart';
+import 'package:parts/models/veiws/navigation/homenavigation.dart';
+import 'package:parts/models/veiws/navigation/profile.dart';
+import 'package:parts/models/veiws/navigation/settings.dart';
 import 'bottomNavigationBar/bottomNavigationBar.dart';
-import 'package:parts/veiws/navigation/gift.dart';
+import 'package:parts/models/veiws/navigation/gift.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});

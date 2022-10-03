@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:parts/confiq/color.dart';
-import 'package:parts/veiws/drawer/DrawerPages.dart';
+import 'package:parts/models/veiws/drawer/DrawerPages.dart';
 
 import '../navigation/gift.dart';
 import '../navigation/homenavigation.dart';
@@ -68,6 +68,7 @@ class _bottomNAvigationBarState extends State<bottomNAvigationBar> {
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
+      
     );
   }
 }

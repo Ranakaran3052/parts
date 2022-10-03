@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:parts/veiws/drawer/DrawerPages.dart';
+import 'package:parts/models/veiws/drawer/DrawerPages.dart';
 
 class cart extends StatefulWidget {
   const cart({super.key});

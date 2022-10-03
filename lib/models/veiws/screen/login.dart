@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:parts/confiq/color.dart';
-import 'package:parts/veiws/drawer/DrawerPages.dart';
+import 'package:parts/models/veiws/drawer/DrawerPages.dart';
 
 class log_in extends StatefulWidget {
   const log_in({super.key});

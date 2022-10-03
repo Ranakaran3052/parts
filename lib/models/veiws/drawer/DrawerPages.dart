@@ -1,8 +1,11 @@
+import 'dart:html';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:parts/confiq/color.dart';
 
-import 'package:parts/veiws/drawer/drawerscreen/help.dart';
-import 'package:parts/veiws/navigation/profile.dart';
+import 'package:parts/models/veiws/drawer/drawerscreen/help.dart';
+import 'package:parts/models/veiws/navigation/profile.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});
@@ -16,17 +19,28 @@ class DrawerPage extends StatelessWidget {
         padding: EdgeInsets.all(20),
         // ignore: prefer_const_literals_to_create_immutables
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              CircleAvatar(
-                backgroundImage: AssetImage(
-                  'asset/images/me.jpeg.png',
-                ),
-                radius: 50,
+          Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+            CircleAvatar(
+              backgroundImage: AssetImage(
+                'asset/images/me.jpeg.png',
               ),
-            ],
-          ),
+              radius: 50,
+            ),
+            Column(
+              children: [
+                Text(
+                  "Karan Rana",
+                  textAlign: TextAlign.start,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text("karan232@gmail.com",
+                 textAlign: TextAlign.start,)
+              ],
+            ),
+          ]),
           ListTile(
             leading: Icon(Icons.person),
             title: Text("Profile"),

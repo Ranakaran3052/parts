@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:html';
 
 import 'package:parts/confiq/color.dart';
-import 'package:parts/veiws/navigation/giftnavigation/cards.dart';
-import 'package:parts/veiws/navigation/giftnavigation/chancetowin.dart';
-import 'package:parts/veiws/navigation/giftnavigation/contest.dart';
-import 'package:parts/veiws/navigation/giftnavigation/giveaway.dart';
+import 'package:parts/models/veiws/navigation/giftnavigation/cards.dart';
+import 'package:parts/models/veiws/navigation/giftnavigation/chancetowin.dart';
+import 'package:parts/models/veiws/navigation/giftnavigation/contest.dart';
+import 'package:parts/models/veiws/navigation/giftnavigation/giveaway.dart';
 
 import 'giftnavigation/vouchers.dart';
 
