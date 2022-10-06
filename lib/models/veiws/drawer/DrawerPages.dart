@@ -6,6 +6,7 @@ import 'package:parts/confiq/color.dart';
 
 import 'package:parts/models/veiws/drawer/drawerscreen/help.dart';
 import 'package:parts/models/veiws/navigation/profile.dart';
+import 'package:parts/models/veiws/navigation/settings.dart';
 
 class DrawerPage extends StatelessWidget {
   const DrawerPage({super.key});
@@ -36,8 +37,10 @@ class DrawerPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Text("karan232@gmail.com",
-                 textAlign: TextAlign.start,)
+                Text(
+                  "karan232@gmail.com",
+                  textAlign: TextAlign.start,
+                )
               ],
             ),
           ]),
@@ -66,7 +69,10 @@ class DrawerPage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.settings),
             title: Text("Settings"),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => settings()));
+            },
           ),
           ListTile(
             leading: Icon(Icons.logout),

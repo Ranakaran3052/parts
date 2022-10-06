@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  static const String _title = 'Flutter Code Sample';
+  
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -13,7 +13,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: MyApp._title,
+
       home: MyStatelessWidget(),
     );
   }

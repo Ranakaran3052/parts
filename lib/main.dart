@@ -15,16 +15,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.yellow,
-      ),
-      home: MyHomePage(),
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.yellow,
+        ),
+        home: 
+         MyHomePage(),
 
-      ///navigationbar2()
-      // log_in()
-      //startuppage()
-    );
+        ///navigationbar2()
+        // log_in()
+        //startuppage()
+        );
   }
 }
