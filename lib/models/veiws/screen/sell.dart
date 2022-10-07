@@ -17,9 +17,10 @@ class _sellState extends State<sell> {
     print("sell_page");
     return Scaffold(
       appBar: primarybar,
-      // body: GridView.count(crossAxisCount: crossAxisCount)
+      body: Center(
+        child: Text(" wait for the update "),
+      ),
     );
-    // ignore: dead_code
 
     ;
   }
